@@ -12,3 +12,17 @@ export function QueryProvider({ children }: { children: React.ReactNode }) {
         </QueryClientProvider>
     )
 }
+
+/*
+
+React Query (TanStack Query) needs client-side React functionality to manage:
+- Server-state caching.
+- Loading and error states.
+- Background refetching.
+- Query subscriptions.
+- Cache invalidation.
+It uses React Context internally to make the QueryClient available to components.
+
+That's why QueryClientProvider needs to run as a Client Component.
+
+*/
